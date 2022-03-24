@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원가입</title>
+<style>
+table { width:600px; border-collapse: collapse; }
+th, td { border: 1px solid black; padding: 10px 20px;}
+input[name=phone] { width: 60px }
+</style>
+</head>
+<body>
+<input type='button' value='닫기' onclick='window.close()'>
+<h2>회원가입</h2>
+<a href="../index.html">홈으로</a>
+
+<!-- form 태그내에 file 태그를 전송하는 경우
+1. form태그 전송방식이 post여야 한다: method='post'
+2. enctype='multyport/form-data' -->
+
+<form action="join.html" autocomplete='off' method='post' enctype='multyport/form-data'>
+<table>
+	<colgroup>
+		<col width="150px">
+		<col width="350px">
+	</colgroup>
+	<caption>회원가입정보</caption>
+	<tr>
+		<th>아이디</th>
+		<td><input type="text" name="id"></td>
+	</tr>
+	<tr>
+		<th>비밀번호</th>
+		<td><input type="password" name="password"></td>
+	</tr>
+	<tr>
+		<th>비밀번호확인</th>
+		<td><input type="password" name="password_ck"></td>
+	</tr>
+	<tr>
+		<th>이름</th>
+		<td><input type="text" name="name"></td>
+	</tr>
+	<tr>
+		<th>성별</th>
+		<td><label><input type="radio" name="gender" value="male">남</label>
+		<label><input type="radio" name="gender" value="female">여</label></td>
+	</tr>
+	<tr>
+		<th>전화번호</th>
+		<td><select name="phone">
+			<option selected>02</option>
+			<option>031</option>
+			<option>062</option>
+			<option>070</option>
+			</select> -
+			<input type="text" name="phone"> -
+			<input type="text" name="phone">
+		</td>
+	</tr>
+	<tr>
+		<th>SMS수신여부</th>
+		<td><label><input type="checkbox" name="sms">수신</label></td>
+	</tr>
+	<tr>
+		<th>이메일</th>
+		<td><input type="text" name="address">@
+		<select name="email">
+			<option value="naver.com">네이버</option>
+			<option value="gmail.com">구글</option>
+			<option value="daum.net">다음</option>
+			<option selected>직접입력</option>
+		</select>
+		</td>
+	</tr>
+	<tr>
+		<th>사진등록</th>
+		<td><input type='file' name='filename'></td>
+	</tr>
+	<tr>
+		<th colspan='2'><input type='submit' value='회원가입'></th>
+	</tr>
+</table>
+</form>
+</body>
+</html>
