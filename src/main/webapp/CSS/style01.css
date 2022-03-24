@@ -1,4 +1,6 @@
 @charset "UTF-8";
-body { text-align: center; }
+@import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
+body { text-align: center; margin: 0 auto; font-family: 'Gamja Flower', cursive; }
 table { border-collapse: collapse; margin: 0 auto; }
 th, td { border: 1px solid #222; padding: 5px 10px; }
+ul { list-style-type: none; padding: 0 }
