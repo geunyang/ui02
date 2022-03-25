@@ -27,7 +27,7 @@ input[name=phone] { width: 60px }
 	<caption>회원가입정보</caption>
 	<tr>
 		<th>아이디</th>
-		<td><input type="text" name="id"></td>
+		<td><input type="text" name="id" autofocus></td>
 	</tr>
 	<tr>
 		<th>비밀번호</th>
@@ -75,10 +75,14 @@ input[name=phone] { width: 60px }
 	</tr>
 	<tr>
 		<th>사진등록</th>
-		<td><input type='file' name='filename'></td>
+		<td><label><input type='file' style='display:none' name='profile'>
+				<img src='../images/join.png' width='80px; height=15px' style='border:1px solid' ></label></td>
 	</tr>
 	<tr>
-		<th colspan='2'><input type='submit' value='회원가입'></th>
+		<th colspan='2'>
+			<input type='submit' value='회원가입'>
+			<input type='reset' value='초기화'>
+		</th>
 	</tr>
 </table>
 </form>
