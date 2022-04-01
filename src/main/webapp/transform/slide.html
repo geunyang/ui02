@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+img { width: 300px; height: 200px;}
+ul{ list-style: none; margin: 0; padding: 0;}
+ul li{ float: left; margin: 20px ; }
+ul li:not(:last-child) { margin-right:0;}
+.slide-wrap { 
+	width: 660px; height: 240px;
+	border: 1px solid;
+	position: relative;
+	overflow: hidden;
+} 
+.slide { 
+	position: absolute; 
+	width: 1940px; height: 240px;
+}
+#transform .slide:hover {
+	transform: translateX(-320px);
+}
+#transform .slide:active {
+	transform: translateX(-640px);
+}
+
+
+#transform2 .slide-wrap {
+	margin-top: 50px;
+	width: 980px; 
+	position: relative;
+}
+#transform2 .slide {
+	position: absolute; 
+	width: 1940px; height: 240px;
+
+}
+#transform2 .slide:hover {
+	transform: translateX(-320px);
+}
+#transform2 .slide:active {
+	transform: translateX(-640px);
+}
+</style>
+</head>
+<body>
+<h3>이미지이동실습</h3>
+<div id="transform">
+	<div class="slide-wrap">
+		<div class="slide">
+			<ul>
+				<li><img src="../images/cb01.jpg"></li>
+				<li><img src="../images/cb06.jpg"></li>
+				<li><img src="../images/cb05.jpg"></li>
+				<li><img src="../images/cb03.jpg"></li>
+				<li><img src="../images/cb04.jpg"></li>
+				<li><img src="../images/cb02.jpg"></li>
+			</ul>
+		</div>
+	</div>
+</div> 
+<div id="transform2">
+	<div class="slide-wrap">
+		<div class="slide">
+		<ul>
+			<li><img src="../images/cb01.jpg"></li>
+			<li><img src="../images/cb06.jpg"></li>
+			<li><img src="../images/cb05.jpg"></li>
+			<li><img src="../images/cb03.jpg"></li>
+			<li><img src="../images/cb04.jpg"></li>
+			<li><img src="../images/cb02.jpg"></li>
+		</ul>
+	</div>
+	</div>
+</div> 
+</body>
+</html>

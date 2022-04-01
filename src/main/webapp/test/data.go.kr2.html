@@ -4,56 +4,91 @@
 <meta charset="UTF-8">
 <title>개발자네트워크</title>
 <style>
-body { margin: 0; }
+body { margin: 0; font-size: 14px;}
 ul { list-style: none; margin: 0; padding: 0;  }
 
 header a { text-decoration: none; color: white; }
-header nav a:hover { color: yellow; }
-header { width: 100%; height: 100px; background-color: #1f6ab5;
-	border-bottom: 1px solid #aaa; line-height: 80px; }
-header nav { width: 1200px; margin: 0 auto; }
-header nav ul li { 
-	display: inline-block;
-	font-size: 20px; font-weight: bold;
+header { width: 100%; height: 100px; background-color: #0670b9; }
+header nav { 
+	width: 1200px; margin: 0 auto; 
+	height: 120px; line-height: 120px; 
+}
+header nav ul li {	
+	display: inline-block; 
+	font-size: 20px; font-weight: bold; 
+	margin-right: 100px; 
 } 
-header nav ul li:not(:first-child) { margin-left: 70px;}
+header #enabled { text-decoration: underline; color: yellow; }/* 큰일났다 */
+header nav a:hover { color: yellow; }
 
-#container { width: 1200px; margin: 20px auto; }
+#container { width: 1200px; margin: 0 auto; }
 section a { text-decoration: none; color: initial; }
-section h1 { text-align: center; }
-section p { text-align: center; }
+section h1 { padding: 20px 0 0 0; }
+section p { border-bottom: 2px solid black; padding: 30px 0; }
 section article ul { list-style: none; height: 50px; } 
 section article ul li.middle {  
 	float: left;
-	border: 1px solid #ddd; 
+	border: 1px solid #ddd; border-bottom: 1px solid #2775c4; 
 	height: 50px; line-height: 50px; width: 20%;
 	box-sizing: border-box; text-align: center ;
-	display: inline; font-size: 20px;
+	display: inline; font-size: 15px;
 }
-article ul li#on { border: 2px solid #666; border-bottom: 1px solid #fff; display: inline; font-size: 20px;}
-article ul li.bt { display: inline; float: right; display: block;}
-article table { border-collapse: collapse; }
-article table thead { border-top: 2px solid #bbb; background-color: #eee; }
-article table th, article table td { border-bottom: 1px solid #ccc;}
-article table td:not(:nth-child(2)) { text-align: center; } 
-article tbody td a:hover { color: #2775c4; text-decoration: underline; } 
+article ul li#on { 
+	border: 1px solid #2775c4; 
+	border-bottom: none; display: inline; }/* 큰일남 */
 
-aside { border-top: 1px solid #ccc;  width: 1200px; margin: 20px auto; height:100px; }
-aside div { display: inline-block; }
-aside ul li { display: inline; text-decoration: none; color: initial; }
-aside a { text-decoration: none; color: initial; } 
-address { font-style: normal; } 
+/* article ul li.bt { float:left; padding: 10px ; border: 1px solid #ddd; display: block; }
+article ul li.bt a:hover { border: 1px solid #2775c4;  padding: 10px; text-decoration: underline; }
+ */
+#search { height: 36px; margin: 20px 0;}
+#search div { float: right; }
+#search a, #search input { height: 36px; }
+#search a { 
+	display: inline-block; padding: 0 10px;
+	border: 1px solid #ccc; line-height: 36px; 
+}
+input { border: 1px solid #666; box-sizing: border-box; }
+input[type=text] { padding-left: 10px; }
+input[type=button] { 
+	background-color: #0670b9; border: 1px solid #0670b9; 
+	color: #fff; padding: 0 20px;}
+article table { clear: right; border-collapse: collapse; }
+article table thead { border-top: 2px solid #bbb; background-color: #eee; }
+article table th, article table td { height: 30px; border-bottom: 1px solid #ccc; padding: 10px; }
+article table td:not(:nth-child(2)) { text-align: center; } 
+article table td:nth-child(2) { font-weight: bold; } 
+article tbody td a:hover { color: #2775c4; text-decoration: underline; } 
+#paging { 
+	line-height: 36px; 
+	text-align: center; 
+	margin: 20px 0;
+}
+#paging a { min-width: 36px; height: 36px; display: inline-block; }
+#paging a.on { border: 1px solid #0670b9; }
+
+aside { border-top: 1px solid #ccc; width: 100%; margin: 20px auto;}
+aside ul { width: 1200px; margin: 0px auto; height:30px; }
+aside ul li { display: inline; text-decoration: none; color: initial; padding-right: 30px;}
+aside ul a { text-decoration: none; color: initial; } 
+aside ul:first-child { font-weight: bold; padding: 20px 0; border-bottom: 1px solid #ccc; }
+aside ul:last-child { padding: 20px 0; }
+aside a:hover { text-decoration: underline;  } 
+aside #sp li:nth-child(2) { color:#2775c4; } 
+
+footer { width: 1200px; margin: 20px auto; } 
+footer address { font-style: normal; display: inline;} /* ㅋ5 */
+footer p { display: inline; padding: 0 10px 0 0;  }
 </style>
 </head>
 <body> 
 <header>
 	<nav>
-		<ul>
+		<ul> 
 			<li><a href="#">데이터찾기</a></li>
 			<li><a href="#">국가데이터맵</a></li>
 			<li><a href="#">데이터요청</a></li>
 			<li><a href="#">데이터활용</a></li>
-			<li><a href="#">정보공유</a></li>
+			<li id="enabled"><a href="#">정보공유</a></li>
 			<li><a href="#">이용안내</a></li>
 		</ul>
 	</nav>
@@ -69,13 +104,14 @@ address { font-style: normal; }
 			<li class="middle">유용한 사이트</li>
 		</ul>
 	</article>
-	<article>
-		<ul>
-			<li class="bt"><a href="#">제목+내용</a></li>
-			<li class="bt"><a href="#">제목</a></li>
-			<li class="bt"><a href="#">내용</a></li>
-			<li class="bt"><input type="search" placeholder="검색어를 입력하세요" ></li>
-		</ul>
+	<article id="search">
+		<div>
+			<a href="#">제목+내용</a>
+			<a href="#">제목</a>
+			<a href="#">내용</a>
+			<input type="search" placeholder="검색어를 입력하세요" >
+			<input type="button" value="검색">
+		</div>
 	</article>
 	<article>
 		<table>
@@ -131,7 +167,7 @@ address { font-style: normal; }
 					<td>2022-03-05</td>
 				</tr>
 				<tr>
-					<td>1</td>
+					<td>6</td>
 					<td><a href="#">한국소비자원 생필품 및 서비스 가격 정보 api 인증키 에러</a></td>
 					<td>홍길동</td>
 					<td>20</td>
@@ -141,24 +177,33 @@ address { font-style: normal; }
 			</tbody>
 		</table>
 	</article>
-</section>
-<aside>
-	<div>공공데이터 개방문의
+	<div id="paging">
+		<a class="on">1</a>
+		<a>2</a>
+		<a>3</a>
+		<a>4</a>
+		<a>5</a>
 	</div>
-	<div>운영자 메일상담</div>
+</section>
+</div>
+<aside>
 	<ul>
+		<li>공공데이터개방문의 <a href="#"> 1566-0025</a></li>
+		<li><a href="#">운영자 메일상담</a></li>
+	</ul>
+	<ul id="sp">
 		<li><a href="#">이용약관</a></li>
-		<li><a href="#">개인정보처리방침</a></li>
+		<li><a href="#">개인정보처리방침</a></li><!-- ㅋ6 -->
 		<li><a href="#">공공데이터포털 소개</a></li>
 		<li><a href="#">분쟁조정신청</a></li>
 		<li>개인정보분야별책임자 : 최시복</li>
 	</ul>
 </aside>
 <footer>
-	<address>(30116) 세종특별자치시 한누리대로 411(어진동, 행정안전부 별관)대표번호 : 1566-0025문의시간 : 09:00~18:00 (월~금)
-	ⓒ행정안전부. All rights reserved.
-	</address>
+	<address>(30116) 세종특별자치시 한누리대로 411(어진동, 행정안전부 별관)</address>
+	<p>대표번호 : 1566-0025</p>  
+	<p>문의시간 : 09:00~18:00 (월~금)</p>
+	<p>ⓒ행정안전부. All rights reserved.</p>
 </footer>
-</div>
 </body>
 </html>
