@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../transform/css/slide.css">
+<style>
+ul li { 
+	border: 1px solid #eee;
+	width: 300px;
+	height: 200px;
+	padding: 0;
+	text-align: center;
+	box-sizing: border-box;
+}
+@keyframes animation_step {
+	from {left: 0px; } to {left: -1280px; }
+} 
+#transform .slide {
+	animation: animation_step 16s steps(4,start) 3s infinite alternate;
+}
+</style>
+</head>
+<body>
+<div id="transform">
+	<div class="slide-wrap">
+		<div class="slide">
+			<ul>
+				<li>한국공학대학교<br>데이터분석모델</li>
+				<li>(주) 알파코<br>엑셀보다 쉬운 SQL</li>
+				<li>주식회사구름<br>개발자첫걸음</li>
+				<li>(주) 휴넷<br>머신러닝중급</li>
+				<li>러닝핏<br>4차 산업혁명</li>
+				<li>주식회사코드프레소<br>바로 써먹는 풀스텍</li>				
+			</ul>
+		</div>
+	</div>
+</div>
+</body>
+</html> 
