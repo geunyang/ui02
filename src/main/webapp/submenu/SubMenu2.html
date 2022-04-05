@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>서브메뉴2</title>
+<style>
+body { margin: 0; }
+ul { margin: 0; padding: 0; list-style: none;}
+a { text-decoration: none; color: inherit; }
+
+header { min-width: 1200px; border-bottom: 1px solid #aaa; }
+header nav { width: 1200px; margin: 0 auto; }
+header nav > ul { display: inline-block; margin: 30px 0; }
+#category > li { float: left; }
+#category > li:not(:first-child) { margin-left: 100px;}
+#category .submenu{
+	position: absolute;
+	left: 0; top: 86px; width: 100%; min-width: 1200px;
+	background-color: #f5f6ff;
+	border-bottom: 1px solid #ddd;
+	transform: scaleY(0);
+	transform-origin: top;
+	transition: 0.3s;
+	box-shadow: 0 4px 4px 2px #eee;
+}
+#category .menu:hover + .submenu {
+	transform: scaleY(1);
+}
+#category .submenu ul {
+	width: 200px; margin: 20px 0px;  display: inline-block;
+}
+#category .submenu li:not(:first-child){ margin-top: 10px; }
+
+</style>
+</head>
+<body>
+<header>
+	<nav>
+		<ul id="category">
+			<li><a class="menu">훈련과정</a>
+				<div class="submenu">
+					<nav>
+						<ul>
+							<li><a>국민내일배움카드 훈련과정</a></li>
+							<li><a>K-디지털 트레이닝</a></li>
+							<li><a>K-디지털 기초역량훈련</a></li>
+							<li><a>STEP 이러닝</a></li>
+						</ul>
+						<ul>
+							<li><a>기업 훈련과정</a></li>
+							<li><a>일학습병행과정</a></li>
+							<li><a>정부부처별 훈련과정</a></li>
+						</ul>
+					</nav>
+				</div>
+			</li>
+			<li><a class="menu">지원제도</a>
+				<div class="submenu">
+					<nav>
+						<ul>
+							<li><a>정부지원사업안내</a></li>
+						</ul>
+						<ul>
+							<li><a>정부지원사업안내</a></li>
+							<li><a>훈련안내 및 절차</a></li>
+							<li><a>훈련기관 유형 안내3</a></li>
+						</ul>
+					</nav>
+				</div>
+			</li>
+			<li><a class="menu">일자리·직업정보</a>
+				<div class="submenu">
+					<nav>
+						<ul>
+							<li><a>구인정보</a></li>
+							<li><a>자격정보</a></li>
+						</ul>
+						<ul>
+							<li><a>국가자격</a></li>
+							<li><a>공인민간자격</a></li>
+							<li><a>국가기술자격 시험일정</a></li>
+						</ul>
+					</nav>
+				</div>
+			</li>
+			<li><a class="menu">지식정보센터</a>
+				<div class="submenu">
+					<nav>
+						<ul>
+							<li><a>인재뱅크</a></li>
+							<li><a>스타훈련교사</a></li>
+							<li><a>카테고리4의 서브1메뉴3</a></li>
+						</ul>
+						<ul>
+							<li><a>훈련기관평가정보</a></li>
+							<li><a>집체훈련</a></li>
+							<li><a>원격훈련</a></li>
+						</ul>
+					</nav>
+				</div>
+			</li>
+		</ul>
+	</nav>
+</header>
+</body>
+</html>
